@@ -7,7 +7,6 @@ package trab3tri.test;
 
 import trab3tri.model.Cliente;
 import trab3tri.model.Ingresso;
-import trab3tri.model.Pagodao;
 
 /**
  *
@@ -20,13 +19,11 @@ public class Teste {
         c.setNome("Rafaella Santana Bueno");
         c.setSexo("Feminino");
         
-        Pagodao p = new Pagodao();
         
         Ingresso i = new Ingresso();
         i.gerarCodigo();
         
         c.comprarIngresso(i);
-        p.comprarIng(i);
     }
     
 }

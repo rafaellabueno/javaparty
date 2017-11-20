@@ -54,8 +54,7 @@ public class IngressosGeradosController implements Initializable {
     }
 
     @FXML
-    private void voltaTela() {
-        Stage stage = (Stage) fecharTela.getScene().getWindow(); //Obtendo a janela atual
-        stage.close(); //Fechando o Stage
+    private void voltarTela(){
+        Helper.trocaTela("menu.fxml",null);     
     }
 }

@@ -14,9 +14,9 @@ import trab3tri.model.Helper;
 /**
  * FXML Controller class
  *
- * @author Rafael
+ * @author Aluno
  */
-public class BlocoController implements Initializable {
+public class CriarFestaController implements Initializable {
 
     /**
      * Initializes the controller class.
@@ -24,21 +24,16 @@ public class BlocoController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    } 
     
     @FXML
-    private void ingressosTela(){
-        Helper.trocaTela("ingressosGerados.fxml",null);     
+    private void voltarTela(){
+        Helper.trocaTela("menu.fxml",null);     
     }
     
     @FXML
-    private void pontosTela(){
-        Helper.trocaTela("pontosPorEmail.fxml",null);     
-    }
-    
-    @FXML
-    private void voltaTela() {
-        Helper.trocaTela("menu.fxml", null);
+    private void criarFesta(){
+        // 
     }
     
 }

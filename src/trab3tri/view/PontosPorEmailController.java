@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import trab3tri.model.Cliente;
 import trab3tri.model.Festa;
+import trab3tri.model.Helper;
 import trab3tri.model.Ingresso;
 
 /**
@@ -34,6 +35,11 @@ public class PontosPorEmailController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         conteudoColumn.setCellValueFactory(dados -> new SimpleStringProperty(dados.getValue().getEmail()));
         //conteudoColumn2.setCellValueFactory(dados -> new SimpleStringProperty(dados.getValue().getPontos()));
-    }    
+    }  
+  
+    @FXML
+    private void voltarTela(){
+        Helper.trocaTela("menu.fxml",null);     
+    }
     
 }

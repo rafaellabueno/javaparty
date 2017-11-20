@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trab3tri.view.CriarFestaController">
+   <children>
+      <Button layoutX="220.0" layoutY="343.0" mnemonicParsing="false" onAction="#criarFesta" text="Criar" />
+      <Button layoutX="320.0" layoutY="343.0" mnemonicParsing="false" onAction="#voltarTela" text="Voltar" />
+      <Label layoutX="64.0" layoutY="78.0" text="Nome da Festa" />
+      <Label layoutX="66.0" layoutY="112.0" text="Descrição" />
+      <Label layoutX="79.0" layoutY="209.0" text="Data" />
+      <Label layoutX="26.0" layoutY="253.0" text="Quantidade de Ingressos" />
+      <TextField layoutX="187.0" layoutY="74.0" />
+      <TextArea layoutX="187.0" layoutY="112.0" prefHeight="68.0" prefWidth="376.0" />
+      <TextField layoutX="187.0" layoutY="205.0" />
+      <TextField layoutX="187.0" layoutY="249.0" />
+      <Label layoutX="272.0" layoutY="24.0" text="Criar Festa" />
+   </children>
+</AnchorPane>

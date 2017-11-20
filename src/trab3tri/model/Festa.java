@@ -11,6 +11,9 @@ package trab3tri.model;
  */
 public class Festa {
     private int qtdIng;
+    private String tipoDeFesta;
+    private String data;
+    private String descricao;
     
     public int getQtdIng() {
         return qtdIng;
@@ -18,6 +21,14 @@ public class Festa {
 
     public void setQtdIng(int qtdIng) {
         this.qtdIng = qtdIng;
+    }
+    
+    public String getTipoDeFesta() {
+        return tipoDeFesta;
+    }
+
+    public void setTipoDeFesta(String tipoDeFesta) {
+        this.tipoDeFesta = tipoDeFesta;
     }
     
 }

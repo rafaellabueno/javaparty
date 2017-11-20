@@ -29,23 +29,23 @@ public class MenuController implements Initializable {
     } 
     
     @FXML
-    private void blocoTela(){
-        Helper.trocaTela("bloco.fxml",null);     
+    private void criarFestaTela(){
+        Helper.trocaTela("criar_festa.fxml",null);     
     }
     
     @FXML
-    private void halloweenTela(){
-        Helper.trocaTela("halloween.fxml",null);     
+    private void pontosTela(){
+        Helper.trocaTela("pontos_por_email.fxml",null);     
     }
     
     @FXML
-    private void octoberTela(){
-        Helper.trocaTela("octoberFest.fxml",null);     
+    private void ingressosGeradosTela(){
+        Helper.trocaTela("ingressos_gerados.fxml",null);     
     }
     
     @FXML
-    private void pagodaoTela(){
-        Helper.trocaTela("pagodao.fxml",null);     
+    private void venderIngressoTela(){
+        Helper.trocaTela("vender_ingresso.fxml",null);     
     }
     
 }
