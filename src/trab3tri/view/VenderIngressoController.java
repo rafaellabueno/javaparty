@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import trab3tri.model.Cliente;
+import trab3tri.model.Helper;
 import trab3tri.model.Ingresso;
 
 /**
@@ -42,5 +43,10 @@ public class VenderIngressoController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+    
+    @FXML
+    private void voltarTela(){
+        Helper.trocaTela("menu.fxml",null);     
+    }
     
 }

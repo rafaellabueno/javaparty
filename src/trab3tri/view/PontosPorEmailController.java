@@ -33,12 +33,11 @@ public class PontosPorEmailController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        conteudoColumn.setCellValueFactory(dados -> new SimpleStringProperty(dados.getValue().getEmail()));
-        //conteudoColumn2.setCellValueFactory(dados -> new SimpleStringProperty(dados.getValue().getPontos()));
+        //TODO
     }  
   
     @FXML
-    private void voltarTela(){
+    private void voltaTela(){
         Helper.trocaTela("menu.fxml",null);     
     }
     

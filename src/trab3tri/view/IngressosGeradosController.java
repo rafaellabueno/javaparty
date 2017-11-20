@@ -38,23 +38,11 @@ public class IngressosGeradosController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       // conteudoColumn.setCellValueFactory(dados -> new SimpleStringProperty(dados.getValue().));
-       //conteudoColumn.setCellValueFactory(dados -> new SimpleStringProperty(dados.getValue().getClass()));
-        
-        
-        Cliente c = new Cliente();
-        c.setEmail("rafaellasbueno@gmail.com");
-        c.setNome("Rafaella Santana Bueno");
-        c.setSexo("Feminino");
-
-        Ingresso i = new Ingresso();
-        i.gerarCodigo();
-
-        c.comprarIngresso(i);
+       //TODO
     }
 
     @FXML
-    private void voltarTela(){
+    private void voltaTela(){
         Helper.trocaTela("menu.fxml",null);     
     }
 }

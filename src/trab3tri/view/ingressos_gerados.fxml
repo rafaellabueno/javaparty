@@ -13,6 +13,6 @@
           <TableColumn prefWidth="77.0" text="Festa" />
         </columns>
       </TableView>
-      <Button fx:id="fecharTela" layoutX="274.0" layoutY="311.0" mnemonicParsing="false" onAction="#voltarTela" text="Voltar" />
+      <Button fx:id="fecharTela" layoutX="274.0" layoutY="311.0" mnemonicParsing="false" onAction="#voltaTela" text="Voltar" />
    </children>
 </AnchorPane>

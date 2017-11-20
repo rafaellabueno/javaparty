@@ -13,6 +13,6 @@
           <TableColumn prefWidth="75.0" text="Pontos" />
         </columns>
       </TableView>
-      <Button id="fecharTela" layoutX="274.0" layoutY="329.0" mnemonicParsing="false" text="Voltar" />
+      <Button id="fecharTela" layoutX="274.0" layoutY="329.0" mnemonicParsing="false" onAction="#voltaTela" text="Voltar" />
    </children>
 </AnchorPane>
