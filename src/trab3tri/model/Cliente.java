@@ -48,13 +48,11 @@ public class Cliente {
     }
     
     public void comprarIngresso(Ingresso i){
-        ArrayList<Ingresso> r  = Ingresso.getAll();
+        
      
-        for(Ingresso x : r){
+        
             ingressos.add(i);
             
-        }
-        System.out.println(ingressos);
     }
     
     

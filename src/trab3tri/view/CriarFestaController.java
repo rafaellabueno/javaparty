@@ -9,6 +9,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TextField;
+import trab3tri.model.Dados;
+import trab3tri.model.Festa;
 import trab3tri.model.Helper;
 
 /**
@@ -18,11 +21,14 @@ import trab3tri.model.Helper;
  */
 public class CriarFestaController implements Initializable {
 
+    @FXML
+    private TextField nome;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
         // TODO
     } 
     
@@ -34,6 +40,9 @@ public class CriarFestaController implements Initializable {
     @FXML
     private void criarFesta(){
         // 
+        Festa f = new Festa();
+        f.setnomeDeFesta(nome.getText());
+        Dados.festas.add(f);
     }
     
 }
