@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trab3tri.view.BlocoController">
+   <children>
+      <Button layoutX="213.0" layoutY="142.0" mnemonicParsing="false" onAction="#pontosTela" text="Total de Pontos Por E-mail" textFill="#252323" />
+      <Button layoutX="235.0" layoutY="215.0" mnemonicParsing="false" onAction="#ingressosTela" text="Ingressos Gerados" />
+      <Label layoutX="196.0" layoutY="45.0" text="Bloco Parei de Beber Não de Mentir" />
+      <Button layoutX="268.0" layoutY="298.0" mnemonicParsing="false" onAction="#voltaTela" text="Voltar" />
+   </children>
+</AnchorPane>
