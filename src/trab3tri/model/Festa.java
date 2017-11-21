@@ -5,22 +5,25 @@
  */
 package trab3tri.model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Rafaella Bueno
  */
 public class Festa {
-    private int qtdIng;
+    private String qtdIng;
     private String nomeDeFesta;
     private String tipoDeFesta;
     private String data;
     private String descricao;
+    private ArrayList<Ingresso> ingressos = new ArrayList<>();
     
-    public int getQtdIng() {
+    public String getQtdIng() {
         return qtdIng;
     }
 
-    public void setQtdIng(int qtdIng) {
+    public void setQtdIng(String qtdIng) {
         this.qtdIng = qtdIng;
     }
     
@@ -39,5 +42,30 @@ public class Festa {
     public void setnomeDeFesta(String nomeDeFesta) {
         this.nomeDeFesta = nomeDeFesta;
     }
+    
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+    
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+    
+    public void addIngresso(Ingresso i){
+        
+     
+        
+            ingressos.add(i);
+            
+    }
+    
     
 }

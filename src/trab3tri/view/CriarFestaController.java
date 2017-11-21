@@ -9,6 +9,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import trab3tri.model.Dados;
 import trab3tri.model.Festa;
@@ -23,6 +24,18 @@ public class CriarFestaController implements Initializable {
 
     @FXML
     private TextField nome;
+    
+    @FXML
+    private TextField tipo;
+    
+    @FXML
+    private TextField descricao;
+    
+    @FXML
+    private TextField data;
+    
+    @FXML
+    private TextField qtd;
     /**
      * Initializes the controller class.
      */
@@ -42,7 +55,16 @@ public class CriarFestaController implements Initializable {
         // 
         Festa f = new Festa();
         f.setnomeDeFesta(nome.getText());
+        f.setTipoDeFesta(tipo.getText());
+        f.setDescricao(descricao.getText());
+        f.setData(data.getText());
+        f.setQtdIng(qtd.getText()); 
         Dados.festas.add(f);
+        
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Informação");
+        alert.setHeaderText("Sua festa foi criada com sucesso!");
+        alert.showAndWait();
     }
     
 }

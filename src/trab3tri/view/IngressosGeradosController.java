@@ -38,7 +38,7 @@ public class IngressosGeradosController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       //TODO
+       //conteudoColumn.setCellValueFactory(dados -> new SimpleStringProperty(dados.getValue().));
     }
 
     @FXML

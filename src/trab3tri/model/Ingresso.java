@@ -33,7 +33,7 @@ public class Ingresso {
         this.valor = valor;
     }
 
-    public void gerarCodigo() {
+    public int gerarCodigo() {
         int numero = 0;
         int[] num = new int[1000];
         Random r = new Random();
@@ -47,7 +47,7 @@ public class Ingresso {
                 }
             }
         }
-        setCodIngresso(numero);
+        return numero;
     }
     
     public static ArrayList<Ingresso> getAll() {
