@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package trab3tri.model;
+package com.gitlab.rafaellabueno.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -12,10 +13,10 @@ import java.util.Random;
  *
  * @author Rafaella Bueno
  */
-public class Ingresso {
+public class Ingresso implements Serializable{
 
     private int codIngresso;
-    private double valor;
+    
 
     public int getCodIngresso() {
         return codIngresso;
@@ -23,14 +24,6 @@ public class Ingresso {
 
     public void setCodIngresso(int codIngresso) {
         this.codIngresso = codIngresso;
-    }
-
-    public double getValor() {
-        return valor;
-    }
-
-    public void setValor(double valor) {
-        this.valor = valor;
     }
 
     public int gerarCodigo() {

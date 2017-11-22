@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package trab3tri.test;
+package com.gitlab.rafaellabueno.test;
 
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.util.Date;
-import trab3tri.model.Cliente;
-import trab3tri.model.Ingresso;
-import trab3tri.model.Festa;
+import com.gitlab.rafaellabueno.model.Cliente;
+import com.gitlab.rafaellabueno.model.Ingresso;
+import com.gitlab.rafaellabueno.model.Festa;
 
 /**
  *
@@ -24,7 +24,7 @@ public class TesteOutputStream {
         //pocaoDeVida.addIngrediente(new Ingrediente("Batata", 10));
         
         try{
-            FileOutputStream fos = new FileOutputStream("pocoes.dat",true);
+            FileOutputStream fos = new FileOutputStream("festa.dat",true);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             //oos.writeObject(pocaoDeVida);
             oos.close();

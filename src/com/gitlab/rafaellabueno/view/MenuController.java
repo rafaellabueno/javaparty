@@ -3,15 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package trab3tri.view;
+package com.gitlab.rafaellabueno.view;
 
 import java.awt.event.ActionEvent;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import trab3tri.model.Helper;
-//import trab3tri.model.Helper;
+import com.gitlab.rafaellabueno.controller.ArquivinhosUtil;
+import com.gitlab.rafaellabueno.controller.HelperUtil;
+import com.gitlab.rafaellabueno.model.Dados;
+import com.gitlab.rafaellabueno.model.Festa;
+//import trab3tri.model.HelperUtil;
 
 /**
  * FXML Controller class
@@ -30,22 +34,27 @@ public class MenuController implements Initializable {
     
     @FXML
     private void criarFestaTela(){
-        Helper.trocaTela("criar_festa.fxml",null);     
+        HelperUtil.trocaTela("criar_festa.fxml",null);     
     }
     
     @FXML
     private void pontosTela(){
-        Helper.trocaTela("pontos_por_email.fxml",null);     
+        HelperUtil.trocaTela("pontos_por_email.fxml",null);     
     }
     
     @FXML
     private void ingressosGeradosTela(){
-        Helper.trocaTela("ingressos_gerados.fxml",null);     
+        HelperUtil.trocaTela("ingressos_gerados.fxml",null);     
     }
     
     @FXML
     private void venderIngressoTela(){
-        Helper.trocaTela("vender_ingresso.fxml",null);     
+        List<Festa> f = ArquivinhosUtil.CarregaFesta();
+        Dados.festas=f;
+        for(Festa f2 : f){
+            System.out.println(f2.getnomeDeFesta());
+        }
+        HelperUtil.trocaTela("vender_ingresso.fxml",null);     
     }
     
 }

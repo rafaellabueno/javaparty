@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package trab3tri.view;
+package com.gitlab.rafaellabueno.view;
 
+import java.io.File;
 import java.io.IOException;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
@@ -12,6 +13,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import com.gitlab.rafaellabueno.controller.ArquivinhosUtil;
+import com.gitlab.rafaellabueno.model.Dados;
 
 
 /**
@@ -27,6 +30,16 @@ public class Main extends Application {
     
     @Override
     public void start(Stage ps2) {
+        File f = new File("Festa.txt");
+        File f2 = new File("Cliente.txt");
+        if(f.exists()==true){
+        Dados.festas = ArquivinhosUtil.CarregaFesta();        
+        }
+        if(f2.exists()==true){
+            Dados.clientes = ArquivinhosUtil.CarregaCliente();
+        }
+        
+        
         this.primaryStage = ps2; 
         
      

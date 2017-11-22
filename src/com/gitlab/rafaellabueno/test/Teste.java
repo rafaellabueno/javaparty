@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package trab3tri.test;
+package com.gitlab.rafaellabueno.test;
 
-import trab3tri.model.Cliente;
-import trab3tri.model.Ingresso;
+import com.gitlab.rafaellabueno.model.Cliente;
+import com.gitlab.rafaellabueno.model.Ingresso;
 
 /**
  *

@@ -3,28 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package trab3tri.model;
+package com.gitlab.rafaellabueno.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author Rafaella Bueno
  */
-public class Festa {
-    private String qtdIng;
+public class Festa implements Serializable{
+    private int qtdIng;
     private String nomeDeFesta;
     private String tipoDeFesta;
     private String data;
     private String descricao;
+    private double valor;
     private ArrayList<Ingresso> ingressos = new ArrayList<>();
     
-    public String getQtdIng() {
-        return qtdIng;
+    public int getQtdIng() {
+        return ingressos.size();
     }
 
-    public void setQtdIng(String qtdIng) {
-        this.qtdIng = qtdIng;
+    public void setQtdIng(int i){
+    ingressos = new ArrayList<>(i);
     }
     
     public String getTipoDeFesta() {
@@ -66,6 +68,15 @@ public class Festa {
             ingressos.add(i);
             
     }
+    
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+    
     
     
 }

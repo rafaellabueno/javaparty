@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package trab3tri.view;
+package com.gitlab.rafaellabueno.view;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -11,10 +11,14 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
-import trab3tri.model.Cliente;
-import trab3tri.model.Festa;
-import trab3tri.model.Helper;
-import trab3tri.model.Ingresso;
+import com.gitlab.rafaellabueno.model.Cliente;
+import com.gitlab.rafaellabueno.model.Festa;
+import com.gitlab.rafaellabueno.controller.HelperUtil;
+import com.gitlab.rafaellabueno.model.Dados;
+import com.gitlab.rafaellabueno.model.Ingresso;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.TableView;
 
 /**
  * FXML Controller class
@@ -28,18 +32,24 @@ public class PontosPorEmailController implements Initializable {
     private TableColumn<Cliente, String> conteudoColumn;
      @FXML
     private TableColumn<Cliente, String> conteudoColumn2;
+     @FXML 
+     private TableView tabela;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        ObservableList<Cliente> lista = FXCollections.observableArrayList();
+        lista.addAll(Dados.clientes); 
+        
         conteudoColumn.setCellValueFactory(dados -> new SimpleStringProperty(dados.getValue().getEmail()));
-        //conteudoColumn2.setCellValueFactory(dados -> new SimpleStringProperty(dados.getValue().getPontos()));
+        conteudoColumn2.setCellValueFactory(dados -> new SimpleStringProperty(Integer.toString(dados.getValue().getPontos())));
+        tabela.setItems(lista);
     }  
   
     @FXML
     private void voltaTela(){
-        Helper.trocaTela("menu.fxml",null);     
+        HelperUtil.trocaTela("menu.fxml",null);     
     }
     
 }

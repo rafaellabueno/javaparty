@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package trab3tri.model;
+package com.gitlab.rafaellabueno.controller;
 
 import java.io.IOException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import static trab3tri.view.Main.ps;
-import trab3tri.view.MenuController;
+import static com.gitlab.rafaellabueno.view.Main.ps;
+import com.gitlab.rafaellabueno.view.MenuController;
 
 
 
@@ -18,7 +18,7 @@ import trab3tri.view.MenuController;
  *
  * @author Rafaella Bueno
  */
-public class Helper {
+public class HelperUtil {
     
     public static Scene trocaTela(String str, String titulo){
         Scene scene = null; //Ela começa nula
