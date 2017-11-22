@@ -18,7 +18,6 @@ public class Festa implements Serializable{
     private String tipoDeFesta;
     private String data;
     private String descricao;
-    private double valor;
     private ArrayList<Ingresso> ingressos = new ArrayList<>();
     
     public int getQtdIng() {
@@ -67,14 +66,6 @@ public class Festa implements Serializable{
         
             ingressos.add(i);
             
-    }
-    
-    public double getValor() {
-        return valor;
-    }
-
-    public void setValor(double valor) {
-        this.valor = valor;
     }
     
     

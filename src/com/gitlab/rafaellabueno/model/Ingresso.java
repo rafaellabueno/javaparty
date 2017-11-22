@@ -16,7 +16,7 @@ import java.util.Random;
 public class Ingresso implements Serializable{
 
     private int codIngresso;
-    
+    private double valor;
 
     public int getCodIngresso() {
         return codIngresso;
@@ -24,6 +24,14 @@ public class Ingresso implements Serializable{
 
     public void setCodIngresso(int codIngresso) {
         this.codIngresso = codIngresso;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
     }
 
     public int gerarCodigo() {

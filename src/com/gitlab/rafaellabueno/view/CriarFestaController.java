@@ -39,9 +39,6 @@ public class CriarFestaController implements Initializable {
     
     @FXML
     private TextField qtd;
-    
-    @FXML
-    private TextField valor;
     /**
      * Initializes the controller class.
      */
@@ -64,7 +61,6 @@ public class CriarFestaController implements Initializable {
         f.setTipoDeFesta(tipo.getText());
         f.setDescricao(descricao.getText());
         f.setData(data.getText());
-        f.setValor(Integer.parseInt(valor.getText()));
         f.setQtdIng(Integer.parseInt(qtd.getText())); 
         Dados.festas.add(f);
         
