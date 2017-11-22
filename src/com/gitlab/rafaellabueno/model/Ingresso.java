@@ -5,6 +5,8 @@
  */
 package com.gitlab.rafaellabueno.model;
 
+import com.gitlab.rafaellabueno.controller.ArquivinhosUtil;
+import java.io.File;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Random;
@@ -33,26 +35,5 @@ public class Ingresso implements Serializable{
     public void setValor(double valor) {
         this.valor = valor;
     }
-
-    public int gerarCodigo() {
-        int numero = 0;
-        int[] num = new int[1000];
-        Random r = new Random();
-        for (int i = 0; i < num.length; i++) {
-            numero = r.nextInt(1000) + 1;
-            for (int j = 0; j < num.length; j++) {
-                if (numero == num[j] && j != i) {
-                    numero = r.nextInt(1000) + 1;
-                } else {
-                    num[i] = numero;
-                }
-            }
-        }
-        return numero;
-    }
     
-    public static ArrayList<Ingresso> getAll() {
-        return null;
-        //getAll - arquivo
-    }
 }

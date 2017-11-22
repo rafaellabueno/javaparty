@@ -78,6 +78,19 @@ public class VenderIngressoController implements Initializable {
         Cliente c = new Cliente();
         Ingresso i = new Ingresso();
         Festa f = festa.getSelectionModel().getSelectedItems().get(0);
+        
+        int r = f.geraCodigo();
+        int t = r-1;
+        System.out.println(t);
+        System.out.println(f.getQtdIng());
+        if(t>f.getQtdIng()){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Informação");
+        alert.setHeaderText("Não há mais ingressos disponíveis!");
+        alert.showAndWait();
+            
+        }
+        else{
         c.setNome(nomeCliente.getText());
         c.setEmail(emailCliente.getText());
         if (masculino.isSelected() == true) {
@@ -87,19 +100,17 @@ public class VenderIngressoController implements Initializable {
             c.setSexo("Feminino");
         }
         
-        
-
+       
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Informação");
         alert.setHeaderText("Seu ingresso foi vendido com sucesso!");
-        int r = i.gerarCodigo();
         alert.setContentText("O código do ingresso é: " + r);
         alert.showAndWait();
         i.setCodIngresso(r);
         
         boolean encontrou = false;
         for (Cliente c2 : Dados.clientes) {
-            if (c2.equals(c.getEmail())) {
+            if (c2.getEmail().equals(c.getEmail())) {
                 c2.comprarIngresso(i);
                 encontrou = true;
                 break;
@@ -114,6 +125,7 @@ public class VenderIngressoController implements Initializable {
         
         ArquivinhosUtil.SalvaFesta(Dados.festas);
         ArquivinhosUtil.SalvaCliente(Dados.clientes);
+        }
     }
 
     private void mostraFestas() {

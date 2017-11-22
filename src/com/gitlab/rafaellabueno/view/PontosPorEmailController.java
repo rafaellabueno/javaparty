@@ -42,9 +42,12 @@ public class PontosPorEmailController implements Initializable {
         ObservableList<Cliente> lista = FXCollections.observableArrayList();
         lista.addAll(Dados.clientes); 
         
+        
         conteudoColumn.setCellValueFactory(dados -> new SimpleStringProperty(dados.getValue().getEmail()));
         conteudoColumn2.setCellValueFactory(dados -> new SimpleStringProperty(Integer.toString(dados.getValue().getPontos())));
         tabela.setItems(lista);
+            
+        
     }  
   
     @FXML

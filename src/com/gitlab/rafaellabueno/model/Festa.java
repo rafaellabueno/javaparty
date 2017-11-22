@@ -19,11 +19,15 @@ public class Festa implements Serializable{
     private String data;
     private String descricao;
     private ArrayList<Ingresso> ingressos = new ArrayList<>();
+     private static int num;
     
     public int getQtdIng() {
-        return ingressos.size();
+        return qtdIng;
     }
 
+    public int getIngressosVendidos(){
+        return ingressos.size();
+    }
     public void setQtdIng(int i){
     ingressos = new ArrayList<>(i);
     }
@@ -66,6 +70,11 @@ public class Festa implements Serializable{
         
             ingressos.add(i);
             
+    }
+    
+    public int geraCodigo(){
+        num = ingressos.size()+1;
+        return num;
     }
     
     

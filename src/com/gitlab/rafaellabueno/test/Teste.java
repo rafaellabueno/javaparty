@@ -21,7 +21,7 @@ public class Teste {
         
         
         Ingresso i = new Ingresso();
-        i.gerarCodigo();
+       
         
         c.comprarIngresso(i);
     }

@@ -47,7 +47,7 @@ public class IngressosGeradosController implements Initializable {
         ObservableList<Festa> lista = FXCollections.observableArrayList();
         lista.addAll(Dados.festas);       
         
-       conteudoColumn.setCellValueFactory(dados -> new SimpleStringProperty(Integer.toString(dados.getValue().getQtdIng())));
+       conteudoColumn.setCellValueFactory(dados -> new SimpleStringProperty(Integer.toString(dados.getValue().getIngressosVendidos())));
        conteudoColumn2.setCellValueFactory(dados -> new SimpleStringProperty(dados.getValue().getnomeDeFesta()));
        tabela.setItems(lista);
 
