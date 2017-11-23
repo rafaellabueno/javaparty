@@ -44,7 +44,7 @@ public class Main extends Application {
         
      
         
-        primaryStage.setTitle("Trablho");
+        primaryStage.setTitle("The Bueno Party Company");
         primaryStage.setScene(getRootLayout());
         primaryStage.show();
         

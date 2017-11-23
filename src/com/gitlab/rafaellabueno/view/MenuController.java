@@ -15,6 +15,8 @@ import com.gitlab.rafaellabueno.controller.ArquivinhosUtil;
 import com.gitlab.rafaellabueno.controller.HelperUtil;
 import com.gitlab.rafaellabueno.model.Dados;
 import com.gitlab.rafaellabueno.model.Festa;
+import java.io.File;
+import javafx.scene.control.Alert;
 //import trab3tri.model.HelperUtil;
 
 /**
@@ -49,12 +51,27 @@ public class MenuController implements Initializable {
     
     @FXML
     private void venderIngressoTela(){
+        File fe = new File("Festa.txt");
+        if(fe.exists()==false){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Informação");
+            alert.setHeaderText("Não há festas criadas! Crie uma antes de vender um ingresso");
+            alert.showAndWait();
+            
+        }
+        else{
+            
+        
+        
+        
+        
         List<Festa> f = ArquivinhosUtil.CarregaFesta();
         Dados.festas=f;
         for(Festa f2 : f){
             System.out.println(f2.getnomeDeFesta());
         }
-        HelperUtil.trocaTela("vender_ingresso.fxml",null);     
+        HelperUtil.trocaTela("vender_ingresso.fxml",null);  
+        }
     }
     
 }

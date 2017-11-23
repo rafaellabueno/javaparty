@@ -47,10 +47,10 @@ public class VenderIngressoController implements Initializable {
 
     @FXML
     private Label codigoIngresso;
-    
+
     @FXML
     private Label data;
-    
+
     @FXML
     private Label descricao;
 
@@ -82,61 +82,59 @@ public class VenderIngressoController implements Initializable {
 
     public void venderIngresso() {
         Cliente c = new Cliente();
+        boolean aux = false;
+        for (Cliente c2 : Dados.clientes) {
+            if (emailCliente.getText().equals(c2.getEmail())) {
+                c = c2;
+                aux = true;
+                break;
+            }
+        }
         Ingresso i = new Ingresso();
         Festa f = festa.getSelectionModel().getSelectedItems().get(0);
-        
+
         int r = f.geraCodigo();
-        int t = r;
-        if(t>f.getQtdIng()){
+        if (r > f.getQtdIng()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Informação");
-        alert.setHeaderText("Não há mais ingressos disponíveis!");
-        alert.showAndWait();
-            
-        }
-        else{
-        c.setNome(nomeCliente.getText());
-        c.setEmail(emailCliente.getText());
-        
-         System.out.println(c.getPontos());
-          System.out.println(f.getPontos());
-        c.setPontos(c,f);
-       
-        System.out.println(c.getPontos());
-        
-        System.out.println(c.getPontos());
-        if (masculino.isSelected() == true) {
-            c.setSexo("Masculino");
-        }
-        if (feminino.isSelected() == true) {
-            c.setSexo("Feminino");
-        }
-        
-       
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Informação");
-        alert.setHeaderText("Seu ingresso foi vendido com sucesso!");
-        alert.setContentText("O código do ingresso é: " + r);
-        alert.showAndWait();
-        i.setCodIngresso(r);
-        
-        boolean encontrou = false;
-        for (Cliente c2 : Dados.clientes) {
-            if (c2.getEmail().equals(c.getEmail())) {
-                c2.comprarIngresso(i);
-                encontrou = true;
-                break;
-            } 
-        }
-        if(!encontrou){
+            alert.setTitle("Informação");
+            alert.setHeaderText("Não há mais ingressos disponíveis!");
+            alert.showAndWait();
+
+        } else {
+            if (!aux) {
+                c.setNome(nomeCliente.getText());
+                c.setEmail(emailCliente.getText());
+                if (masculino.isSelected() == true) {
+                    c.setSexo("Masculino");
+                }
+                if (feminino.isSelected() == true) {
+                    c.setSexo("Feminino");
+                }
+
+            }
+            System.out.println(c.getPontos());
+            System.out.println(f.getPontos());
+            c.setPontos(f);
+
+            System.out.println(c.getPontos());
+
+            System.out.println(c.getPontos());
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Informação");
+            alert.setHeaderText("Seu ingresso foi vendido com sucesso!");
+            alert.setContentText("O código do ingresso é: " + r);
+            alert.showAndWait();
+            i.setCodIngresso(r);
             c.comprarIngresso(i);
-            Dados.clientes.add(c);
-        }
-        
-        f.addIngresso(i);
-        
-        ArquivinhosUtil.SalvaFesta(Dados.festas);
-        ArquivinhosUtil.SalvaCliente(Dados.clientes);
+            if (!aux) {
+                Dados.clientes.add(c);
+            }
+
+            f.addIngresso(i);
+
+            ArquivinhosUtil.SalvaFesta(Dados.festas);
+            ArquivinhosUtil.SalvaCliente(Dados.clientes);
         }
     }
 
@@ -156,7 +154,7 @@ public class VenderIngressoController implements Initializable {
             }
         });
     }
-    
+
     @FXML
     public void exibirEspecificacaoFesta() {
         Festa f = festa.getSelectionModel().getSelectedItems().get(0);

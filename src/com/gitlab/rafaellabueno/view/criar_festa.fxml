@@ -5,23 +5,27 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: rgb(255, 183, 214);" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gitlab.rafaellabueno.view.CriarFestaController">
    <children>
       <Button layoutX="220.0" layoutY="343.0" mnemonicParsing="false" onAction="#criarFesta" style="-fx-background-color: white;" text="Criar" />
       <Button layoutX="320.0" layoutY="343.0" mnemonicParsing="false" onAction="#voltarTela" style="-fx-background-color: white;" text="Voltar" />
-      <Label layoutX="53.0" layoutY="57.0" text="Nome da Festa" />
-      <Label layoutX="65.0" layoutY="158.0" text="Descrição" />
-      <Label layoutX="66.0" layoutY="260.0" text="Data" />
-      <Label layoutX="38.0" layoutY="301.0" text="Quantidade de Ingressos" />
+      <Label layoutX="53.0" layoutY="57.0" text="Nome da Festa:" textFill="#fff8f8" />
+      <Label layoutX="65.0" layoutY="158.0" text="Descrição:" textFill="WHITE" />
+      <Label layoutX="66.0" layoutY="260.0" text="Data:" textFill="WHITE" />
+      <Label layoutX="38.0" layoutY="301.0" text="Quantidade de Ingresso:s" textFill="WHITE" />
       <TextField fx:id="nome" layoutX="187.0" layoutY="53.0" />
       <TextArea fx:id="descricao" layoutX="187.0" layoutY="132.0" prefHeight="68.0" prefWidth="376.0" />
       <TextField fx:id="data" layoutX="187.0" layoutY="256.0" />
       <TextField fx:id="qtd" layoutX="187.0" layoutY="297.0" />
-      <Label layoutX="272.0" layoutY="24.0" text="Criar Festa" />
-      <Label layoutX="56.0" layoutY="92.0" text="Tipo de Festa" />
+      <Label layoutX="229.0" layoutY="8.0" text="Criar Festa" textAlignment="CENTER" textFill="#f8f0f0">
+         <font>
+            <Font name="Lobster" size="36.0" />
+         </font></Label>
+      <Label layoutX="56.0" layoutY="92.0" text="Tipo de Festa:" textFill="WHITE" />
       <TextField fx:id="tipo" layoutX="187.0" layoutY="88.0" />
-      <Label layoutX="52.0" layoutY="218.0" text="Pontos da festa" />
+      <Label layoutX="52.0" layoutY="218.0" text="Pontos da festa:" textFill="WHITE" />
       <TextField fx:id="pontos" layoutX="187.0" layoutY="214.0" />
    </children>
 </AnchorPane>
