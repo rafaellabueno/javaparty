@@ -18,6 +18,7 @@ public class Festa implements Serializable{
     private String tipoDeFesta;
     private String data;
     private String descricao;
+    private int pontos;
     private ArrayList<Ingresso> ingressos = new ArrayList<>();
      private static int num;
     
@@ -28,8 +29,8 @@ public class Festa implements Serializable{
     public int getIngressosVendidos(){
         return ingressos.size();
     }
-    public void setQtdIng(int i){
-    ingressos = new ArrayList<>(i);
+    public void setQtdIng(int qtdIng){
+        this.qtdIng = qtdIng;
     }
     
     public String getTipoDeFesta() {
@@ -63,6 +64,15 @@ public class Festa implements Serializable{
     public void setData(String data) {
         this.data = data;
     }
+
+    public int getPontos() {
+        return pontos;
+    }
+
+    public void setPontos(int pontos) {
+        this.pontos = pontos;
+    }
+    
     
     public void addIngresso(Ingresso i){
         
@@ -76,6 +86,8 @@ public class Festa implements Serializable{
         num = ingressos.size()+1;
         return num;
     }
+    
+    
     
     
     

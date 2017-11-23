@@ -39,6 +39,9 @@ public class CriarFestaController implements Initializable {
     
     @FXML
     private TextField qtd;
+    
+    @FXML
+    private TextField pontos;
     /**
      * Initializes the controller class.
      */
@@ -62,6 +65,7 @@ public class CriarFestaController implements Initializable {
         f.setDescricao(descricao.getText());
         f.setData(data.getText());
         f.setQtdIng(Integer.parseInt(qtd.getText())); 
+        f.setPontos(Integer.parseInt(pontos.getText()));
         Dados.festas.add(f);
         
         ArquivinhosUtil.SalvaFesta(Dados.festas);

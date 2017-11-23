@@ -44,9 +44,14 @@ public class Cliente implements Serializable {
         this.email = email;
     }
 
+    public void setPontos(Cliente c, Festa f){
+        this.pontos = pontos + f.getPontos();
+    }
+    
     public int getPontos() {
         pontos = 20 * ingressos.size();
         return pontos;
+
     }
 
     public void comprarIngresso(Ingresso i) {

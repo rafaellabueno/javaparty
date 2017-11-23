@@ -47,6 +47,12 @@ public class VenderIngressoController implements Initializable {
 
     @FXML
     private Label codigoIngresso;
+    
+    @FXML
+    private Label data;
+    
+    @FXML
+    private Label descricao;
 
     @FXML
     private ListView<Festa> festa;
@@ -80,9 +86,7 @@ public class VenderIngressoController implements Initializable {
         Festa f = festa.getSelectionModel().getSelectedItems().get(0);
         
         int r = f.geraCodigo();
-        int t = r-1;
-        System.out.println(t);
-        System.out.println(f.getQtdIng());
+        int t = r;
         if(t>f.getQtdIng()){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Informação");
@@ -93,6 +97,14 @@ public class VenderIngressoController implements Initializable {
         else{
         c.setNome(nomeCliente.getText());
         c.setEmail(emailCliente.getText());
+        
+         System.out.println(c.getPontos());
+          System.out.println(f.getPontos());
+        c.setPontos(c,f);
+       
+        System.out.println(c.getPontos());
+        
+        System.out.println(c.getPontos());
         if (masculino.isSelected() == true) {
             c.setSexo("Masculino");
         }
@@ -143,6 +155,13 @@ public class VenderIngressoController implements Initializable {
 
             }
         });
+    }
+    
+    @FXML
+    public void exibirEspecificacaoFesta() {
+        Festa f = festa.getSelectionModel().getSelectedItems().get(0);
+        descricao.setText(f.getDescricao());
+        data.setText(f.getData());
     }
 
 }
